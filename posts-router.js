@@ -1,5 +1,6 @@
+const express = require('express');
 const router = express.Router();
-const PostsRouter = require('./posts-router');
+const db = require('./data/db')
 
 router.get('/', (req, res) => {
     db.find()
@@ -136,3 +137,5 @@ router.post('/:id/comments', (req, res) => {
             })
     }
 })
+
+module.exports = router;
